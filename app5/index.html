@@ -1,6 +1,27 @@
-<html>
-	<body>
-		Something
+<html ng-app="app5">
+	<body ng-controller="controller5">
+
+		<input ng-model="search"></input>
+
+		<div ng-repeat ="person in people | filter: search">
+			<br>
+			<strong>{{person.name}}:</strong>
+			<br>
+			Height: {{person.height}}
+			<br>
+			Weight: {{person.mass}}
+			<br>
+			Hair Color: {{person.hair_color}}
+			<br>
+			Eye Color: {{person.eye_color}}
+			<br>
+			Birth Year: {{person.birth_year}}<br>
+			</div>
+
+
+
+
+
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
